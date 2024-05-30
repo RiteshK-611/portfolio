@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider enableSystem={true} attribute="data-theme">{children}</ThemeProvider>
+        <ThemeProvider enableSystem={true} attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );

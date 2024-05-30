@@ -12,7 +12,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   const handleNav = () => {
     setNav(!nav);
@@ -35,40 +35,17 @@ const Navbar = () => {
 
   if (!mounted) return null;
 
-  const renderThemeChanger = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
-
-    if (currentTheme === "dark") {
-      return (
-        <Sun
-          className="w-5 h-5 text-yellow-500"
-          role="button"
-          onClick={() => {
-            setTheme("light");
-          }}
-        />
-      );
-    } else {
-      return (
-        <Moon
-          className="w-5 h-5 text-gray-900"
-          role="button"
-          onClick={() => {
-            setTheme("dark");
-          }}
-        />
-      );
-    }
-  };
-
   return (
-    <header className="flex items-center justify-between h-16 px-4 md:px-6 bg-white dark:bg-gray-950 shadow">
+    <header
+      className={
+        "flex items-center justify-between h-16 px-4 md:px-6 bg-white dark:bg-gray-950 shadow"
+      }>
       <Link className="flex items-center gap-2" href="#">
         <Image
-          src={theme == "light" ? "/logo-light.png" : "/logo-dark.png"}
+          src={theme === "light" ? "/logo-light.png" : "/logo-dark.png"}
           alt=""
-          width="50"
-          height="50"
+          width="40"
+          height="40"
         />
       </Link>
       <nav className="hidden md:flex items-center gap-6">
@@ -102,7 +79,10 @@ const Navbar = () => {
         <Toggle
           aria-label="Toggle theme"
           className="hidden md:flex"
-          variant="outline" pressed={theme === "dark"} onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          size="sm"
+          variant="outline"
+          pressed={theme === "dark"}
+          onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
           {theme == "light" ? (
             <Moon className="h-5 w-5" />
           ) : (
@@ -123,44 +103,6 @@ const Navbar = () => {
     //       ? "shadow-xl opacity-95 fixed w-full h-18 md:h-20 z-[100]"
     //       : "fixed w-full h-18 md:h-20 z-[100]"
     //   }>
-    //   {/* Desktop View */}
-    //   <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-    //     <Image
-    //       src={theme == "light" ? "/logo-light.png" : "/logo-dark.png"}
-    //       alt=""
-    //       width="50"
-    //       height="50"
-    //     />
-    //     <div>
-    //       <ul className="hidden md:flex items-center">
-    //         <Link href="/#home">
-    //           <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
-    //         </Link>
-    //         <Link href="/#about">
-    //           <li className="ml-10 text-sm uppercase hover:border-b">About</li>
-    //         </Link>
-    //         <Link href="/#skills">
-    //           <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-    //         </Link>
-    //         <Link href="/#projects">
-    //           <li className="ml-10 text-sm uppercase hover:border-b">
-    //             Projects
-    //           </li>
-    //         </Link>
-    //         <Link href="https://riteshkokam.hashnode.dev">
-    //           <li className="ml-10 text-sm uppercase hover:border-b">
-    //             Blog
-    //           </li>
-    //         </Link>
-    //         <li className="ml-10 items-center justify-center dark:text-blue-600">
-    //           {renderThemeChanger()}
-    //         </li>
-    //       </ul>
-    //       <div onClick={handleNav} className="md:hidden">
-    //         <Menu size={25} />
-    //       </div>
-    //     </div>
-    //   </div>
 
     //   {/* Mobile View */}
     //   <div
