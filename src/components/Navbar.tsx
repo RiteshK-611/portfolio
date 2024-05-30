@@ -8,6 +8,8 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { Toggle } from "./ui/toggle";
 import { Button } from "./ui/button";
 
+import { cn } from "@/lib/utils";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
@@ -37,9 +39,12 @@ const Navbar = () => {
 
   return (
     <header
-      className={
-        "flex items-center justify-between h-16 px-4 md:px-6 bg-white dark:bg-gray-950 shadow"
-      }>
+      className={cn(
+        "flex items-center justify-between h-16 px-4 md:px-6 bg-white dark:bg-gray-950 shadow backdrop-blur-lg",
+        shadow
+          ? "shadow-xl opacity-95 fixed w-full h-18 md:h-20 z-[100]"
+          : "fixed w-full h-18 md:h-20 z-[100]"
+      )}>
       <Link className="flex items-center gap-2" href="#">
         <Image
           src={theme === "light" ? "/logo-light.png" : "/logo-dark.png"}
@@ -75,24 +80,69 @@ const Navbar = () => {
           Blog
         </Link>
       </nav>
-      <div className="flex items-center gap-4">
-        <Toggle
-          aria-label="Toggle theme"
-          className="hidden md:flex"
-          size="sm"
-          variant="outline"
-          pressed={theme === "dark"}
-          onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
-          {theme == "light" ? (
-            <Moon className="h-5 w-5" />
-          ) : (
-            <Sun className="h-5 w-5" />
-          )}
-        </Toggle>
+      <Toggle
+        aria-label="Toggle theme"
+        className="hidden md:flex"
+        size="sm"
+        variant="outline"
+        pressed={theme === "dark"}
+        onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        {theme == "light" ? (
+          <Moon className="h-5 w-5" />
+        ) : (
+          <Sun className="h-5 w-5" />
+        )}
+      </Toggle>
+      <div className="relative md:hidden">
         <Button className="md:hidden" size="icon" variant="outline">
           <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
+        <div className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none dark:bg-gray-950">
+          <nav className="py-1">
+            <Link
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              href="#">
+              Home
+            </Link>
+            <Link
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              href="#">
+              About
+            </Link>
+            <Link
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              href="#">
+              Skills
+            </Link>
+            <Link
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              href="#">
+              Projects
+            </Link>
+            <Link
+              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"
+              href="#">
+              Blog
+            </Link>
+          </nav>
+          <div className="block px-4 pb-2">
+            <Toggle
+              aria-label="Toggle theme"
+              size="sm"
+              variant="outline"
+              pressed={theme === "dark"}
+              onPressedChange={() =>
+                setTheme(theme === "dark" ? "light" : "dark")
+              }>
+              {theme == "light" ? (
+                <Moon className="h-5 w-5" />
+              ) : (
+                <Sun className="h-5 w-5" />
+              )}
+            </Toggle>
+          </div>
+        </div>
       </div>
     </header>
 
