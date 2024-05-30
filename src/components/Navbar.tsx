@@ -5,6 +5,8 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import { Toggle } from "./ui/toggle";
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -92,10 +94,26 @@ const Navbar = () => {
         </Link>
         <Link
           className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50 transition-colors"
-          href="#">
+          href="https://riteshkokam.hashnode.dev">
           Blog
         </Link>
       </nav>
+      <div className="flex items-center gap-4">
+        <Toggle
+          aria-label="Toggle theme"
+          className="hidden md:flex"
+          variant="outline" pressed={theme === "dark"} onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          {theme == "light" ? (
+            <Moon className="h-5 w-5" />
+          ) : (
+            <Sun className="h-5 w-5" />
+          )}
+        </Toggle>
+        <Button className="md:hidden" size="icon" variant="outline">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Toggle menu</span>
+        </Button>
+      </div>
     </header>
 
     // <div
