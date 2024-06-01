@@ -73,10 +73,8 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "flex items-center justify-between px-4 md:px-6 bg-white dark:bg-gray-950 backdrop-blur-lg",
-        shadow
-          ? "shadow-xl opacity-95 fixed w-full h-18 md:h-20 z-[100]"
-          : "fixed w-full h-14 md:h-16 z-[100]"
+        "flex items-center justify-between fixed w-full h-14 md:h-16 z-[100] px-4 md:px-6 backdrop-blur-lg",
+        shadow && "shadow dark:shadow-lg"
       )}>
       <Link className="flex items-center gap-2" href="#">
         <Image
