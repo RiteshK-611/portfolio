@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Toggle } from "./ui/toggle";
 import { Button } from "./ui/button";
 
@@ -58,9 +58,9 @@ const Navbar = () => {
         pressed={theme === "dark"}
         onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
         {theme == "light" ? (
-          <Moon className="h-5 w-5" />
+          <MoonIcon className="h-5 w-5" />
         ) : (
-          <Sun className="h-5 w-5" />
+          <SunIcon className="h-5 w-5" />
         )}
       </Toggle>
     );
@@ -120,11 +120,11 @@ const Navbar = () => {
       {/* Mobile View */}
       <div className="relative md:hidden">
         <Button
-          className="md:hidden"
+          className="md:hidden menu"
           size="icon"
           variant="outline"
           onClick={toggleMenu}>
-          <Menu className="h-6 w-6" />
+          <HamburgerMenuIcon className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
         {isMenuOpen && (
