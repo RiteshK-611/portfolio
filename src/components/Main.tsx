@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Spotlight } from "./ui/spotlight";
 
 const Main = () => {
   const socialBtn =
@@ -8,8 +9,9 @@ const Main = () => {
   return (
     <main
       id="home"
-      className="w-full h-screen text-center flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 relative z-[-10] flex place-items-center justify-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+      className="w-full h-screen text-center flex min-h-screen items-center justify-between p-24 ">
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" />
+      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
             Let&apos;s Build Something Together
@@ -30,33 +32,6 @@ const Main = () => {
             I’m focused on building responsive front-end web applications while
             learning back-end technologies. */}
           </p>
-          {/* <div className="flex items-center justify-evenly m-auto md:max-w-[50%] py-4">
-            <Link href="https://twitter.com/riteshkokam">
-              <div className={socialBtn}>
-                <BsTwitter />
-              </div>
-            </Link>
-            <Link href="https://instagram.com/ritesh_kokam">
-              <div className={socialBtn}>
-                <AiFillInstagram />
-              </div>
-            </Link>
-            <Link href="https://linkedin.com/in/ritesh-kokam/">
-              <div className={socialBtn}>
-                <FaLinkedinIn />
-              </div>
-            </Link>
-            <Link href="https://github.com/RiteshK-611">
-              <div className={socialBtn}>
-                <FaGithub />
-              </div>
-            </Link>
-            <Link href="mailto:riteshkokam@gmail.com">
-              <div className={socialBtn}>
-                <HiMail />
-              </div>
-            </Link>
-          </div> */}
         </div>
       </div>
     </main>
