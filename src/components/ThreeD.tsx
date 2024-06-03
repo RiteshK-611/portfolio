@@ -11,7 +11,7 @@ const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef
   const prof = useTexture("/profile.png");
   const mouse = useThree((state) => state.mouse);
   const camera = useThree((state) => state.camera);
-  const lightRef = useRef();
+  const lightRef = useRef<HTMLCanvasElement>();
 
   useFrame(() => {
     // lightRef.current.position.x = mouse.x * -3;
@@ -24,7 +24,7 @@ const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef
     // With Smooth Transitions
     vec1.set(mouse.x * -3, mouse.y * -3, 15);
     if (!pointerStatus) vec1.set(0, 0, 19);
-    // lightRef.current.position.lerp(vec1, 0.1);
+    lightRef.current.position.lerp(vec1, 0.1);
 
     // To Dynamically Change Sphere Visibility
     let size = Math.abs(canvasRef.current.scrollWidth / 100 - 9.7);
@@ -55,7 +55,7 @@ const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef
 
 const Canva = () => {
   const [pointerStatus, setPointerStatus] = useState(false);
-  const canvasRef = useRef<HTMLCanvasElement>();
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   return (
     <>
