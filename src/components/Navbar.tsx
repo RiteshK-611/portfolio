@@ -51,18 +51,18 @@ const Navbar = () => {
 
   const ToggleBtn = () => {
     return (
-      <Toggle
+      <Button
         aria-label="Toggle theme"
         size="sm"
-        variant="outline"
-        pressed={theme === "dark"}
-        onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        variant="ghost"
+        className="px-0 w-9"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
         {theme == "light" ? (
           <MoonIcon className="h-5 w-5" />
         ) : (
           <SunIcon className="h-5 w-5" />
         )}
-      </Toggle>
+      </Button>
     );
   };
 
