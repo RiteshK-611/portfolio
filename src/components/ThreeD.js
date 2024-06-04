@@ -7,11 +7,11 @@ import { Vector3 } from "three";
 const vec1 = new Vector3();
 const vec2 = new Vector3();
 
-const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef: React.MutableRefObject<HTMLCanvasElement> }) => {
+const Three = ({ pointerStatus, canvasRef }) => {
   const prof = useTexture("/profile.png");
   const mouse = useThree((state) => state.mouse);
   const camera = useThree((state) => state.camera);
-  const lightRef = useRef<HTMLCanvasElement>();
+  const lightRef = useRef();
 
   useFrame(() => {
     // lightRef.current.position.x = mouse.x * -3;
@@ -35,7 +35,7 @@ const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef
   return (
     <>
       <spotLight
-        // ref={lightRef}
+        ref={lightRef}
         color="#ffffff"
         position={[0, 0, 8]}
         intensity={1}
@@ -55,7 +55,7 @@ const Three = ({ pointerStatus, canvasRef }: { pointerStatus: boolean, canvasRef
 
 const Canva = () => {
   const [pointerStatus, setPointerStatus] = useState(false);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const canvasRef = useRef();
 
   return (
     <>
