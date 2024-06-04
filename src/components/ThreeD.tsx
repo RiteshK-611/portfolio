@@ -7,11 +7,17 @@ import { Vector3 } from "three";
 const vec1 = new Vector3();
 const vec2 = new Vector3();
 
-const Three = ({ pointerStatus, canvasRef }) => {
+const Three = ({
+  pointerStatus,
+  canvasRef,
+}: {
+  pointerStatus: boolean;
+  canvasRef: any;
+}) => {
   const prof = useTexture("/profile.png");
   const mouse = useThree((state) => state.mouse);
   const camera = useThree((state) => state.camera);
-  const lightRef = useRef();
+  const lightRef = useRef<any>();
 
   useFrame(() => {
     // lightRef.current.position.x = mouse.x * -3;
@@ -55,7 +61,7 @@ const Three = ({ pointerStatus, canvasRef }) => {
 
 const Canva = () => {
   const [pointerStatus, setPointerStatus] = useState(false);
-  const canvasRef = useRef();
+  const canvasRef = useRef<any>();
 
   return (
     <>
