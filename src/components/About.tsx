@@ -1,5 +1,5 @@
 import React from "react";
-import { MdOutlinePlayArrow } from "react-icons/md";
+// import { MdOutlinePlayArrow } from "react-icons/md";
 import Link from "next/link";
 import Canva from "./ThreeD";
 import Image from "next/image";
@@ -26,7 +26,6 @@ const About = () => {
             interfaces (UI) and projects with Javascript, React, Node, and
             learning new technologies.
           </p>
-
           <div>
             <p>
               Apart from coding, designing and developing, there are few hobbies
@@ -34,27 +33,27 @@ const About = () => {
             </p>
             <ul>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Photography</span>
               </li>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Swimming</span>
               </li>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Yoga</span>
               </li>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Football</span>
               </li>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Watching Movies</span>
               </li>
               <li className="flex items-center">
-                <MdOutlinePlayArrow color="#5651e5" />
+                {/* <MdOutlinePlayArrow color="#5651e5" /> */}
                 <span className="pl-2">Playing Video Games</span>
               </li>
             </ul>
@@ -68,7 +67,7 @@ const About = () => {
         <div className="w-full h-auto m-auto p-4 md:hidden hover:scale-95 ease-in duration-300">
           <Image className="" src={pic} alt="/" />
         </div>
-          <Canva />
+        <Canva />
       </div>
     </div>
   );
