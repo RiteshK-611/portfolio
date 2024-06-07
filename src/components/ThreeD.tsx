@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/no-unknown-property */
 import React, { useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
@@ -14,7 +16,7 @@ const Three = ({
   pointerStatus: boolean;
   canvasRef: any;
 }) => {
-  const prof = useTexture("/profile.png");
+  const prof = useTexture("../../public/profile.png");
   const mouse = useThree((state) => state.mouse);
   const camera = useThree((state) => state.camera);
   const lightRef = useRef<any>();

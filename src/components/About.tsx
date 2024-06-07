@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Canva from "./ThreeD";
 import Image from "next/image";
-import pic from "../public/profile.png";
+import pic from "../../public/profile.png";
 
 const About = () => {
   return (
