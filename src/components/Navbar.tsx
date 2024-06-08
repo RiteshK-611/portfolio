@@ -5,10 +5,9 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { HamburgerMenuIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
-import { Toggle } from "./ui/toggle";
 import { Button } from "./ui/button";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; 
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
