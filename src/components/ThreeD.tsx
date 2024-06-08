@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
-import { Vector3, TextureLoader } from "three";
+import { Vector3 } from "three";
 
 const vec1 = new Vector3();
 const vec2 = new Vector3();
@@ -54,7 +54,7 @@ const Three = ({
       />
       <mesh>
         <sphereGeometry args={[2.5, 64, 64]} />
-        <meshPhongMaterial />
+        <meshPhongMaterial color="white" />
       </mesh>
     </>
   );
@@ -66,15 +66,17 @@ const Canva = () => {
 
   return (
     <>
-      <Canvas
-        ref={canvasRef}
-        className="hidden md:block"
-        onPointerEnter={(e) => setPointerStatus(true)}
-        onPointerLeave={(e) => setPointerStatus(false)}>
-        {/* <ambientLight intensity={0.1} /> */}
-        {/* <pointLight position={[0, 0, 1]} /> */}
-        <Three pointerStatus={pointerStatus} canvasRef={canvasRef} />
-      </Canvas>
+      <div className="-m-2 rounded-xl  p-2 ring-1 ring-inset ring-primary/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+        <Canvas
+          ref={canvasRef}
+          className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5"
+          onPointerEnter={(e) => setPointerStatus(true)}
+          onPointerLeave={(e) => setPointerStatus(false)}>
+          {/* <ambientLight intensity={0.1} /> */}
+          {/* <pointLight position={[0, 0, 1]} /> */}
+          <Three pointerStatus={pointerStatus} canvasRef={canvasRef} />
+        </Canvas>
+      </div>
     </>
   );
 };
