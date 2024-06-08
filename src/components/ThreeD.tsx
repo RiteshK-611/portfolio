@@ -1,10 +1,9 @@
 "use client";
 
-/* eslint-disable react/no-unknown-property */
 import React, { useRef, useState } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
-import { Vector3 } from "three";
+import { Vector3, TextureLoader } from "three";
 
 const vec1 = new Vector3();
 const vec2 = new Vector3();
@@ -16,14 +15,15 @@ const Three = ({
   pointerStatus: boolean;
   canvasRef: any;
 }) => {
-  const prof = useTexture("../../public/profile.png");
+  const prof = useTexture("/profile.png");
   const mouse = useThree((state) => state.mouse);
   const camera = useThree((state) => state.camera);
   const lightRef = useRef<any>();
 
-  useFrame(() => {
+  useFrame(({ clock }) => {
     // lightRef.current.position.x = mouse.x * -3;
     // lightRef.current.position.y = mouse.y * -3;
+
     // if(!pointerStatus) {
     //   lightRef.current.position.x = 0;
     //   lightRef.current.position.y = 0;
@@ -44,11 +44,10 @@ const Three = ({
     <>
       <spotLight
         ref={lightRef}
-        color="#ffffff"
-        position={[0, 0, 8]}
-        intensity={1}
-        penumbra={0}
-        angle={0.115}
+        position={[0, 0, 10]}
+        intensity={990}
+        penumbra={2}
+        angle={0.118}
         decay={2}
         distance={500}
         map={prof}
@@ -72,6 +71,8 @@ const Canva = () => {
         className="hidden md:block"
         onPointerEnter={(e) => setPointerStatus(true)}
         onPointerLeave={(e) => setPointerStatus(false)}>
+        {/* <ambientLight intensity={0.1} /> */}
+        {/* <pointLight position={[0, 0, 1]} /> */}
         <Three pointerStatus={pointerStatus} canvasRef={canvasRef} />
       </Canvas>
     </>
