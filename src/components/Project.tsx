@@ -23,12 +23,8 @@ const Project = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid grid-rows-4 gap-8">
           <div className="md:grid grid-cols-5 gap-8 m-auto p-5 group">
-            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10">
-              <PinContainer
-              containerClassName="relative"
-                title="/ui.aceternity.com"
-                href="https://twitter.com/mannupaaji">
-                <div className="relative flex basis-full p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem]">
+            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
+              {/* <div className="relative flex basis-full p-1 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem]">
                   <div className="relative overflow-hidden lg:rounded-xl flex justify-center text-card-foreground shadow bg-primary/5">
                     <Image
                       src="/inar.jpg"
@@ -39,8 +35,14 @@ const Project = () => {
                     />
                     <Image src="/bg.png" alt="bgimg" width={500} height={500} />
                   </div>
-                </div>
-              </PinContainer>
+                </div> */}
+              <div className="bg-[url('/bg.png')] bg-cover p-5 overflow-hidden rounded-lg flex items-center justify-center">
+                <img
+                  src="/inar.jpg"
+                  alt="inar"
+                  className="rounded-lg"
+                />
+              </div>
             </div>
             <div className="col-span-3 m-auto pt-5 md:pt-0 p-1 ">
               <p className="pb-4 text-xl font-bold group-hover:underline-offset-4 group-hover:underline ease-in duration-300">
