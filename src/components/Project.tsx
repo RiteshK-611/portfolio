@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PinContainer } from "./ui/3d-pin";
+import { Dock, DockIcon } from "./ui/dock";
+import { Icons } from "@/lib/Icons";
 
 const usedArray = [
   "React",
@@ -25,47 +26,57 @@ const Project = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid grid-rows-4 gap-8">
           <div className="md:grid grid-cols-5 gap-8 m-auto p-5 group">
-            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
+            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent transform transition-transform ease-in duration-200 origin-bottom hover:skew-x-12">
               <div className="rounded-lg p-4 overflow-hidden bg-[#13162D] bg-[url('/bg.png')] bg-cover">
-                  <Image
-                    src="/inar.jpg"
-                    alt="inar"
-                    className="rounded-lg translate-y-4 rotate-6"
-                    width={420}
-                    height={420}
-                    loading="lazy"
-                  />
+                <Image
+                  src="/inar.jpg"
+                  alt="inar"
+                  className="rounded-lg translate-y-4rotate-6"
+                  width={420}
+                  height={420}
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className="col-span-3 w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
-              <p className="pb-4 text-xl font-bold group-hover:underline-offset-4 group-hover:underline ease-in duration-300">
+              <p className="pb-4 text-3xl font-bold group-hover:underline-offset-4 group-hover:underline ease-in duration-300">
                 InAR
               </p>
-              <p>
-                In Augmented Reality (InAR). It is an Augmented Reality (AR)
-                based Ecommerce application. It uses Web-based AR or WebAR to
-                place furniture/product in your environment, to get clear
-                knowledge of whether this product fits in our environment before
-                buying it out.
-              </p>
-              <div className="pt-3">
-                <p className="text-sm font-semibold pb-1">Technologies used:</p>
-                {usedArray.map((used, i) => {
-                  return (
-                    <span
-                      key={i}
-                      className="rounded-[3px] text-xs font-bold text-[#0967d2] border border-sky-500 m-[3px] first-of-type:ml-0 py-1 px-3 hover:bg-blue-500 hover:text-white inline-block ease-in duration-300">
-                      {used}
-                    </span>
-                  );
-                })}
+              <div className="rounded-xl border text-card-foreground shadow bg-primary/5 p-2 lg:p-5 h-[82%]">
+                <p>
+                  In Augmented Reality (InAR). It is an Augmented Reality (AR)
+                  based Ecommerce application. It uses Web-based AR or WebAR to
+                  place furniture/product in your environment, to get clear
+                  knowledge of whether this product fits in our environment
+                  before buying it out.
+                </p>
+                <div className="pt-3">
+                  <p className="text-sm font-mono">Tech Stack</p>
+                  <Dock className="left-0">
+                    <DockIcon>
+                      <Icons.gitHub className="h-6 w-6" />
+                    </DockIcon>
+                    <DockIcon>
+                      <Icons.googleDrive className="h-6 w-6" />
+                    </DockIcon>
+                    <DockIcon>
+                      <Icons.notion className="h-6 w-6" />
+                    </DockIcon>
+                    <DockIcon>
+                      <Icons.openai className="h-6 w-6" />
+                    </DockIcon>
+                    <DockIcon>
+                      <Icons.whatsapp className="h-6 w-6" />
+                    </DockIcon>
+                  </Dock>
+                </div>
+                <Link href="#">
+                  <button className="px-5 py-2 mt-4 mr-8">Demo</button>
+                </Link>
+                <Link href="#">
+                  <button className="px-5 py-2 mt-4">Code</button>
+                </Link>
               </div>
-              <Link href="#">
-                <button className="px-5 py-2 mt-4 mr-8">Demo</button>
-              </Link>
-              <Link href="#">
-                <button className="px-5 py-2 mt-4">Code</button>
-              </Link>
             </div>
           </div>
         </div>
