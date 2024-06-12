@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dock, DockIcon } from "./ui/dock";
 import { Icons } from "@/lib/Icons";
+import { motion, useScroll, Variants } from "framer-motion";
 
 const usedArray = [
   "React",
@@ -16,86 +17,20 @@ const usedArray = [
   "WebAR",
 ];
 
-import React from 'react';
-import { motion } from 'framer-motion';
-
-const ImageComponent = () => {
-  return (
-    <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
-      <div className="rounded-lg p-4 overflow-hidden bg-[#13162D] bg-[url('/bg.png')] bg-cover">
-        <motion.img
-          animate={{ rotate: -6, y: 4 }}
-          transition={{ ease: "easeOut", duration: 2 }}
-          src="/inar.jpg"
-          alt="inar"
-          className="rounded-lg transform transition-transform ease-in duration-200"
-          width={420}
-          height={420}
-          loading="lazy"
-        />
-      </div>
-    </div>
-  );
+const cardVariants: Variants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 50,
+    rotate: -10,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
 };
-
-export default ImageComponent;
-
-
-import React from 'react';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
-
-const ImageComponent = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
-
-  return (
-    <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
-      <div className="rounded-lg p-4 overflow-hidden bg-[#13162D] bg-[url('/bg.png')] bg-cover">
-        <motion.img
-          style={{ rotate }}
-          src="/inar.jpg"
-          alt="inar"
-          className="rounded-lg transform transition-transform ease-in duration-200"
-          width={420}
-          height={420}
-          loading="lazy"
-        />
-      </div>
-    </div>
-  );
-};
-
-export default ImageComponent;
-
-
-
-// import React from 'react';
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
-
-const ImageComponent = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [-6, -6]);
-  const translateY = useTransform(scrollYProgress, [0, 1], [4, 4]);
-
-  return (
-    <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
-      <div className="rounded-lg p-4 overflow-hidden bg-[#13162D] bg-[url('/bg.png')] bg-cover">
-        <motion.img
-          style={{ rotate, translateY }}
-          src="/inar.jpg"
-          alt="inar"
-          className="rounded-lg transform transition-transform ease-in duration-200"
-          width={420}
-          height={420}
-          loading="lazy"
-        />
-      </div>
-    </div>
-  );
-};
-
-// export default ImageComponent;
-
 
 const Project = () => {
   return (
@@ -107,19 +42,30 @@ const Project = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid grid-rows-4 gap-8">
           <div className="md:grid grid-cols-5 gap-8 m-auto p-5 group">
-            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
-              <div className="rounded-lg p-4 overflow-hidden bg-[#13162D] bg-[url('/bg.png')] bg-cover">
-                <Image
-                  src="/inar.jpg"
-                  alt="inar"
-                  className="rounded-lg transform transition-transform ease-in duration-200 hover:rotate-6 hover:translate-y-4"
-                  width={420}
-                  height={420}
-                  loading="lazy"
-                />
+            <div className="col-span-2 relative flex items-center justify-center w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-ring bg-transparent">
+              <div className="rounded-lg p-4 overflow-hidden bg-primary/5 bg-[url('/bg.png')] bg-cover">
+                <motion.div
+                  whileInView={{
+                    y: 20,
+                    rotate: 6,
+                    transition: {
+                      type: "spring",
+                      bounce: 0.8,
+                      duration: 0.8,
+                    },
+                  }}
+                  viewport={{ once: true, amount: 1 }}>
+                  <Image
+                    src="/inar.jpg"
+                    alt="inar"
+                    className="rounded-lg ring-1 ring-ring"
+                    width={420}
+                    height={420}
+                  />
+                </motion.div>
               </div>
             </div>
-            <div className="col-span-3 w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-primary/10 bg-transparent">
+            <div className="col-span-3 w-full h-auto m-auto rounded-xl p-4 ring-1 ring-inset ring-ring bg-transparent">
               <p className="pb-4 text-3xl font-bold group-hover:underline-offset-4 group-hover:underline ease-in duration-300">
                 InAR
               </p>
