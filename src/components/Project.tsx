@@ -7,16 +7,9 @@ import { Dock, DockIcon } from "./ui/dock";
 import { Icons } from "@/lib/Icons";
 import { motion, useScroll, Variants } from "framer-motion";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
+import AvatarCircles from "./ui/avatar-circles";
 
-const usedArray = [
-  "React",
-  "Javascript",
-  "Node",
-  "MongoDB",
-  "MaterialUI",
-  "Figma",
-  "WebAR",
-];
+const item = ["/tail.svg", "/figma.svg", "/next.svg", "/mui.svg"];
 
 const cardVariants: Variants = {
   offscreen: {
@@ -78,40 +71,18 @@ const Project = () => {
                   knowledge of whether this product fits in our environment
                   before buying it out.
                 </p>
-                <div className="pt-3 flex justify-between items-center">
-                  <div>
-                    <p className="text-sm font-mono">Tech Stack</p>
-                    <Dock className="left-0">
-                      <DockIcon>
-                        <Icons.gitHub className="h-6 w-6" />
-                      </DockIcon>
-                      <DockIcon>
-                        <Icons.googleDrive className="h-6 w-6" />
-                      </DockIcon>
-                      <DockIcon>
-                        <Icons.notion className="h-6 w-6" />
-                      </DockIcon>
-                      <DockIcon>
-                        <Icons.openai className="h-6 w-6" />
-                      </DockIcon>
-                      <DockIcon>
-                        <Icons.whatsapp className="h-6 w-6" />
-                      </DockIcon>
-                    </Dock>
-                  </div>
+                <div className="mt-7 flex justify-between items-center">
+                  <AvatarCircles avatarUrls={item} />
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                    <p className="flex lg:text-xl md:text-xs text-s text-indigo-300">
                       Check Live Site
                     </p>
-                    <ArrowTopRightIcon className="ms-3" color="#CBACF9" />
+                    <ArrowTopRightIcon
+                      className="ms-1 w-6 h-6"
+                      color="#CBACF9"
+                    />
                   </div>
                 </div>
-                <Link href="#">
-                  <button className="px-5 py-2 mt-4 mr-8">Demo</button>
-                </Link>
-                <Link href="#">
-                  <button className="px-5 py-2 mt-4">Code</button>
-                </Link>
               </div>
             </div>
           </div>

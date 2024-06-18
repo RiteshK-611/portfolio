@@ -66,7 +66,7 @@ const Canva = () => {
 
   return (
     <>
-      <div className="-m-2 rounded-xl  p-2 ring-1 ring-inset ring-ring lg:-m-4 lg:rounded-2xl lg:p-4">
+      <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-ring lg:-m-4 lg:rounded-2xl lg:p-4">
         <Canvas
           ref={canvasRef}
           className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5"
