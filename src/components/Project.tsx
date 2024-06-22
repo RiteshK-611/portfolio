@@ -53,7 +53,7 @@ const Project = () => {
                 <div className="rounded-xl border text-card-foreground shadow bg-primary/5 p-2 lg:p-5 h-[82%]">
                   <p>{item.description}</p>
                   <div className="mt-7 flex justify-between items-center">
-                    <AvatarCircles avatarUrls={items} />
+                    <AvatarCircles avatarUrls={item.iconList} />
                     <Link
                       href={item.link}
                       className="lg:text-xl md:text-xs text-s text-indigo-300 flex justify-center items-center">
