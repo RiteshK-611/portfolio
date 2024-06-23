@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 // import { MdOutlinePlayArrow } from "react-icons/md";
 import Link from "next/link";
 import Canva from "./ThreeD";
 import Image from "next/image";
 import pic from "../../public/profile.png";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -71,12 +74,22 @@ const About = () => {
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%+10rem)]"
           aria-hidden="true">
-          <div
-            className="animate-spotlight relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#1f1e55] to-[#5651e5] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+          <motion.div
+            initial={{
+              opacity: 0,
+              transform: "translate(-72%, -62%) scale(0.5)",
+            }}
+            whileInView={{
+              opacity: 1,
+              transform: "translate(-50%, -40%) scale(1)",
+              transition: { duration: 2, delay: 0.75 },
+            }}
+            viewport={{ once: true }}
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#1f1e55] to-[#5651e5] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}></div>
+            }}></motion.div>
         </div>
       </div>
     </div>

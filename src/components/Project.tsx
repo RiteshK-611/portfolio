@@ -8,7 +8,12 @@ import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import AvatarCircles from "./ui/avatar-circles";
 import { projects } from "@/data";
 
-const items = ["/assets/svgs/tail.svg", "/assets/svgs/figma.svg", "/assets/svgs/next.svg", "/assets/svgs/mui.svg"];
+const items = [
+  "/assets/svgs/tail.svg",
+  "/assets/svgs/figma.svg",
+  "/assets/svgs/next.svg",
+  "/assets/svgs/mui.svg",
+];
 
 const Project = () => {
   return (
@@ -56,12 +61,9 @@ const Project = () => {
                     <AvatarCircles avatarUrls={item.iconList} />
                     <Link
                       href={item.link}
-                      className="lg:text-xl md:text-xs text-s text-indigo-300 flex justify-center items-center">
+                      className="lg:text-xl md:text-xs text-s text-indigo-600 dark:text-indigo-300 flex justify-center items-center">
                       Check Live Site
-                      <ArrowTopRightIcon
-                        className="ms-1 w-6 h-6"
-                        color="#CBACF9"
-                      />
+                      <ArrowTopRightIcon className="ms-1 w-6 h-6 text-[#8257c2] dark:text-[#CBACF9]" />
                     </Link>
                   </div>
                 </div>

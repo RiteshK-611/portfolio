@@ -79,4 +79,37 @@
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl font-mono;
   }
+
+  .span-tooltip > span {
+    position: absolute;
+    width: fit-content;
+    font-size: x-small;
+    font-weight: 600;
+    background-color: rgba(163, 163, 163, 0.4);
+    padding: 3px 10px;
+    border-radius: 4px;
+    bottom: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+    transform: translateX(-0.3rem);
+  }
+  
+  .span-tooltip > span::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: inherit;
+    transform: rotate(45deg);
+    top: calc(100% - 6px);
+    left: 40%;
+  }
+  
+  .span-tooltip:hover > span {
+    visibility: visible;
+    opacity: 1;
+    bottom: calc(100% + 6px);
+  }
 }
