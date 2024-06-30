@@ -72,10 +72,12 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     /* font-feature-settings: "rlig" 1, "calt" 1; */
   }
+
   h1 {
     @apply text-4xl sm:text-5xl md:text-6xl font-mono;
   }
@@ -94,7 +96,7 @@
     transition: all 0.2s ease;
     transform: translateX(-0.3rem);
   }
-  
+
   .span-tooltip > span::before {
     position: absolute;
     content: "";
@@ -106,10 +108,37 @@
     top: calc(100% - 6px);
     left: 40%;
   }
-  
+
   .span-tooltip:hover > span {
     visibility: visible;
     opacity: 1;
     bottom: calc(100% + 6px);
   }
+
+  .shadow-neumorph {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05),
+      -2px -2px 2px rgba(255, 255, 255, 0.7);
+  }
+
+  .shadow-neumorph-active {
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.1),
+      2px 2px 2px rgba(255, 255, 255, 0.8);
+  }
+
+  .neumorphism-glass {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
+      -7px -7px 15px rgba(255, 255, 255, 0.7),
+      inset 7px 7px 15px rgba(0, 0, 0, 0.1),
+      inset -7px -7px 15px rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }  
 }

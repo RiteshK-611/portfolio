@@ -65,19 +65,15 @@ const Canva = () => {
   const canvasRef = useRef<any>();
 
   return (
-    <>
-      <div className="rounded-xl p-2 ring-1 ring-inset ring-ring lg:rounded-2xl lg:p-4 w-full h-full">
-        <Canvas
-          ref={canvasRef}
-          className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5"
-          onPointerEnter={(e) => setPointerStatus(true)}
-          onPointerLeave={(e) => setPointerStatus(false)}>
-          {/* <ambientLight intensity={0.1} /> */}
-          {/* <pointLight position={[0, 0, 1]} /> */}
-          <Three pointerStatus={pointerStatus} canvasRef={canvasRef} />
-        </Canvas>
-      </div>
-    </>
+    <Canvas
+      ref={canvasRef}
+      className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5 relative w-full h-full max-w-[32rem]"
+      onPointerEnter={(e) => setPointerStatus(true)}
+      onPointerLeave={(e) => setPointerStatus(false)}>
+      {/* <ambientLight intensity={0.1} /> */}
+      {/* <pointLight position={[0, 0, 1]} /> */}
+      <Three pointerStatus={pointerStatus} canvasRef={canvasRef} />
+    </Canvas>
   );
 };
 
