@@ -50,20 +50,19 @@ const About = () => {
           About
         </p>
         <h2 className="py-4 dark:text-white">Who I Am</h2>
-        <div className="md:grid grid-cols-5 row-span-auto gap-8">
-          <div className="col-start-2 col-span-2 row-span-1 m-1 rounded-lg ring-1 ring-fuchsia-400 h-[30vh]">
-            {/* <Globe /> */}
-          </div>
-          <div className="col-span-2 row-span-2 rounded-xl p-2 ring-1 ring-inset ring-ring lg:rounded-2xl relative lg:p-4 w-full h-full max-w-[32rem]">
+
+        <div className="grid grid-cols-5 gap-8 max-w-7xl w-full mx-auto p-4 rounded-md my-12 grid-flow-dense">
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-3 row-span-2"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-2">
             <Canva />
           </div>
-          <div className="col-start-1 col-span-2 row-span-1 m-1 rounded-lg ring-1 ring-fuchsia-400 h-[30vh]"></div>
-
-          <div className="col-span-2 row-span-2 relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-20 pb-20 pt-8">
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-2">
             <IconCloud iconSlugs={slugs} />
           </div>
-          <div className="col-span-2 row-span-1 m-1 rounded-lg ring-1 ring-fuchsia-400"></div>
-          <div className="col-start-4 col-span-2 row-span-1 m-1 rounded-lg ring-1 ring-fuchsia-400"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1"></div>
         </div>
       </div>
     </div>

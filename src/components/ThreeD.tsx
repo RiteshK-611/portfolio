@@ -67,7 +67,7 @@ const Canva = () => {
   return (
     <Canvas
       ref={canvasRef}
-      className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5 relative w-full h-full max-w-[32rem]"
+      className="hidden md:block rounded-xl border text-card-foreground shadow bg-primary/5 relative w-full h-full min-h-[20rem]"
       onPointerEnter={(e) => setPointerStatus(true)}
       onPointerLeave={(e) => setPointerStatus(false)}>
       {/* <ambientLight intensity={0.1} /> */}

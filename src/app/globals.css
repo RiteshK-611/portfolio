@@ -36,7 +36,7 @@
     --radius: 0.5rem;
 
     --box-shadow-light: 7px 7px 15px rgba(0, 0, 0, 0.1),
-      -7px -7px 15px rgba(255, 255, 255, 0.7);
+      -7px -7px 15px rgba(0, 0, 0, 0.1);
     --box-shadow-inset-light: inset 7px 7px 15px rgba(0, 0, 0, 0.1),
       inset -7px -7px 15px rgba(255, 255, 255, 0.7);
     --border-color-light: rgba(255, 255, 255, 0.18);
@@ -74,7 +74,7 @@
     --ring: 240 3.7% 15.9%;
 
     --box-shadow-light: 7px 7px 15px rgba(0, 0, 0, 0.5),
-      -7px -7px 15px rgba(255, 255, 255, 0.1);
+      -7px -7px 15px rgba(0, 0, 0, 0.5);
     --box-shadow-inset-light: inset 7px 7px 15px rgba(0, 0, 0, 0.5),
       inset -7px -7px 15px rgba(255, 255, 255, 0.1);
     --border-color-light: rgba(255, 255, 255, 0.1);
@@ -157,8 +157,6 @@
   } */
 
   .neumorphism-glass {
-    width: 200px;
-    height: 200px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     box-shadow: var(--box-shadow-light);
@@ -168,13 +166,12 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
   }
 
   .neumorphism-glass-top {
-    width: 180px;
-    height: 180px;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: var(--box-shadow-inset-light);
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color-light);
@@ -182,7 +179,73 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 10px;
-    left: 10px;
+  }
+
+  .purple-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(
+      red,
+      purple
+    ); /* Purple with some transparency */
+    clip-path: circle(20px at 50% 50%);
+    filter: blur(10px);
+    z-index: -1;
+    top: calc(21% - 150px); /* Center the circle vertically */
+    left: calc(79% - 150px); /* Center the circle horizontally */
+  }
+
+  .wave {
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    opacity: 0.6;
+    left: 0;
+    top: 0;
+    margin-left: -10%;
+    margin-top: 70%;
+    background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  }
+
+  /* .wave:nth-child(2),
+  .wave:nth-child(3) {
+    top: -5px;
+  } */
+
+  .playing .wave {
+    border-radius: 40%;
+    animation: wave 3000ms infinite linear;
+  }
+
+  .wave {
+    border-radius: 40%;
+    animation: wave 55s infinite linear;
+  }
+
+  .playing .wave:nth-child(2) {
+    animation-duration: 4000ms;
+  }
+
+  .wave:nth-child(2) {
+    animation-duration: 50s;
+  }
+
+  .playing .wave:nth-child(3) {
+    animation-duration: 5000ms;
+  }
+
+  .wave:nth-child(3) {
+    animation-duration: 45s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

@@ -51,7 +51,11 @@ const Skills = () => {
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-8 place-items-center">
           {skills.map((skill, index) => (
             <div key={index} className={`${grp} w-28 h-28`}>
-              <div className={`${grp} w-20 h-20`}>{skill.icon}</div>
+              <div className="purple-circle"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
+              <div className={`${grp} w-24 h-24`}>{skill.icon}</div>
               {/* <div className="absolute w-full h-full bg-red-500 opacity-80 z-10 transform transition-transform duration-500 ease-in-out group-hover:-translate-x-full">
                   <div className="absolute w-3 h-1/2 bg-red-900 rounded-l-xl top-1/4 right-0 z-20"></div>
                 </div> */}
