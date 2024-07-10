@@ -9,6 +9,9 @@ import pic from "../../public/profile.png";
 import { motion } from "framer-motion";
 import IconCloud from "./ui/icon-cloud";
 import Globe from "./ui/globe";
+import DotPattern from "./ui/dot-pattern";
+import { cn } from "@/lib/utils";
+import Ripple from "./ui/ripple";
 
 const slugs = [
   "typescript",
@@ -68,10 +71,33 @@ const About = () => {
           <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-2">
             <IconCloud iconSlugs={slugs} />
           </div>
-          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1 flex items-center overflow-hidden">
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-3xl font-semibold leading-none px-10">
+              Tech enthusiast with a passion for development.
+            </span>
+            <DotPattern
+              className={cn(
+                "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
+              )}
+            />
+            <div className="absolute right-0 -bottom-5">
+              <img src={"/assets/svgs/bg.svg"} />
+            </div>
+          </div>
           <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
           <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
-          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1"></div>
+          <div className="rounded-md border relative min-h-36 grid-flow-dense col-span-2 row-span-1 flex flex-col items-center justify-evenly">
+            <Ripple />
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-3xl font-semibold leading-none px-10">
+              Do you want to start a project together?
+            </span>
+            <button className="relative inline-flex h-12 overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-white dark:bg-[#09090b] px-3 py-1 text-sm font-medium text-black dark:text-white backdrop-blur-3xl">
+                Let&nbsp;s Connect
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
