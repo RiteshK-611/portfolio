@@ -72,13 +72,22 @@ const config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
       },
       boxShadow: {
-        custom: '0 25px 25px rgba(0, 0, 0, 0.25)',
-      }
+        custom: "0 25px 25px rgba(0, 0, 0, 0.25)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
