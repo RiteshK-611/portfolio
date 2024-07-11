@@ -41,6 +41,11 @@
       inset -7px -7px 15px rgba(255, 255, 255, 0.7);
     --border-color-light: rgba(255, 255, 255, 0.18);
     --background-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+
+    --fill-color: black;
+    --stroke-color: black;
+    --fill-opacity: 0.05;
+    --stroke-opacity: 0.1;
   }
 
   .dark {
@@ -79,6 +84,11 @@
       inset -7px -7px 15px rgba(255, 255, 255, 0.1);
     --border-color-light: rgba(255, 255, 255, 0.1);
     --background-gradient: linear-gradient(135deg, #09090b, #1a1a2e);
+
+    --fill-color: white;
+    --stroke-color: white;
+    --fill-opacity: 0.2;
+    --stroke-opacity: 0.15;
   }
 }
 
