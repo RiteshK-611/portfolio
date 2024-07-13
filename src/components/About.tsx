@@ -49,7 +49,7 @@ const slugs = [
 
 const About = () => {
   const { theme } = useTheme();
-  const currentTheme = theme === 'dark' ? 'dark' : 'light';
+  const currentTheme = theme === "dark" ? "dark" : "light";
 
   return (
     <div id="about" className="w-full md:h-full p-2 py-16">
@@ -81,15 +81,34 @@ const About = () => {
             </span>
             <DotPattern
               className={cn(
-                "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
+                "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] left-[2%] top-[4%]"
               )}
             />
             <div className="absolute right-0 -bottom-5">
-              <img src={`/assets/svgs/${theme === 'dark' ? "bgd" : "bgl"}.svg`} />
+              <Image
+                src={`/assets/svgs/${
+                  currentTheme === "dark" ? "bgd" : "bgl"
+                }.svg`}
+                width="200"
+                height="200"
+                alt=""
+              />
             </div>
           </div>
-          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
-          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1"></div>
+          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1">
+            <div className="neumorphism-glass w-full h-full">
+              <div className="neumorphism-glass w-[90%] h-[90%]">
+                <div className="neumorphism-glass w-[87%] h-[87%]"></div>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1">
+            <div className="neumorphism-glass w-full h-full">
+              <div className="neumorphism-glass w-[90%] h-[90%]">
+                <div className="neumorphism-glass w-[87%] h-[87%]"></div>
+              </div>
+            </div>
+          </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-1 flex flex-col items-center justify-evenly">
             <Ripple />
             <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-3xl font-semibold leading-none px-10">
