@@ -208,13 +208,13 @@
 
   .wave {
     position: absolute;
-    width: 140px;
-    height: 100px;
+    width: 90%;
+    height: 9%;
     opacity: 0.6;
-    left: 0;
-    top: 0;
-    margin-left: -10%;
-    margin-top: 70%;
+    /* left: 0; */
+    /* top: 0;
+    margin-left: 50%; */
+    /* margin-top: 50%; */
     background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
   }
 

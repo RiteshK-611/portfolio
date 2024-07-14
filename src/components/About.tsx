@@ -17,30 +17,21 @@ import { useTheme } from "next-themes";
 const slugs = [
   "typescript",
   "javascript",
-  "dart",
   "java",
   "react",
-  "flutter",
   "android",
   "html5",
   "css3",
   "nodedotjs",
   "express",
   "nextdotjs",
-  "prisma",
-  "amazonaws",
   "postgresql",
   "firebase",
-  "nginx",
   "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
   "docker",
   "git",
   "jira",
   "github",
-  "gitlab",
   "visualstudiocode",
   "androidstudio",
   "sonarqube",
@@ -72,11 +63,16 @@ const About = () => {
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-2 p-5">
             <Canva />
           </div>
-          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-2">
-            <IconCloud iconSlugs={slugs} />
+          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-2 flex flex-col items-center justify-center">
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-3xl font-semibold leading-none px-10 pt-8">
+              My Tech Stack
+            </span>
+            <div className="w-[100%]">
+              <IconCloud iconSlugs={slugs} />
+            </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-1 flex items-center overflow-hidden">
-            <span className="z-10 pointer-events-none whitespace-pre-wrap text-3xl font-semibold leading-none px-10">
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-3xl font-semibold leading-none px-10 mb-5">
               Tech enthusiast with a passion for development.
             </span>
             <DotPattern
@@ -97,16 +93,22 @@ const About = () => {
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1">
             <div className="neumorphism-glass w-full h-full">
-              <div className="neumorphism-glass w-[90%] h-[90%]">
+              <div className="wave"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
+              {/* <div className="neumorphism-glass w-[90%] h-[90%]">
                 <div className="neumorphism-glass w-[87%] h-[87%]"></div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 row-span-1">
             <div className="neumorphism-glass w-full h-full">
-              <div className="neumorphism-glass w-[90%] h-[90%]">
+              <div className="wave"></div>
+              <div className="wave"></div>
+              <div className="wave"></div>
+              {/* <div className="neumorphism-glass w-[90%] h-[90%]">
                 <div className="neumorphism-glass w-[87%] h-[87%]"></div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-2 row-span-1 flex flex-col items-center justify-evenly">
