@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <main
       id="home"
-      className="w-full h-screen text-center flex min-h-screen items-center justify-between p-24 ">
+      className="w-full h-screen text-center flex min-h-screen items-center justify-between md:p-24 ">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" />
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
@@ -22,7 +22,7 @@ const Main = () => {
           <h1 className="py-2 text-gray-700 dark:text-gray-600">
             A Full-Stack Software Developer
           </h1>
-          <p className="py-4 text-gray-600 dark:text-gray-400 max-w-[70%] m-auto">
+          <p className="py-4 text-gray-600 text dark:text-gray-400 max-w-[70%] m-auto">
             I&apos;m a Full-Stack Software Developer 🚀 having an experience of
             building Web and Mobile applications with Javascript / React / Node
             and some other cool libraries and frameworks. I love building
