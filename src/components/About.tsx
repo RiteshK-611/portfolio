@@ -54,7 +54,7 @@ const About = () => {
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-3 row-span-2">
             <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex items-center pb-16 md:pb-60 md:shadow-xl">
               <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-2xl md:text-3xl px-5 font-semibold leading-none">
-                I'm very flexible with timezone communications
+                I&apos;m very flexible with timezone communications
               </span>
               <Globe className="top-16" />
               <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
@@ -109,7 +109,7 @@ const About = () => {
             <button className="relative inline-flex h-12 md:h-14 overflow-hidden rounded-md p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-md bg-background px-8 py-2 text-lg font-medium text-foreground backdrop-blur-3xl">
-                Let's Connect
+                Let&apos;s Connect
               </span>
             </button>
           </div>
