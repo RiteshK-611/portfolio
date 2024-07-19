@@ -53,7 +53,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 max-w-7xl w-full mx-auto p-4 rounded-md my-12 grid-flow-dense overflow-hidden">
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-3 row-span-2 order-2 md:order-1">
             <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex items-center pb-16 md:pb-60 md:shadow-xl">
-              <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-2xl md:text-3xl px-5 font-semibold leading-none">
+              <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
               <Globe className="top-16" />
