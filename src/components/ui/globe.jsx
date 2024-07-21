@@ -34,14 +34,14 @@ const GLOBE_CONFIG = {
 };
 
 function Globe({ className }) {
-  let phi = 0;
+  let phi = useRef(0);
   let width = 0;
   const canvasRef = useRef();
 
   const onRender = useCallback(
     (state) => {
-      phi += 0.01;
-      state.phi = phi;
+      phi.current += 0.01;
+      state.phi = phi.current;
       state.width = width * 2;
       state.height = width * 2;
     },

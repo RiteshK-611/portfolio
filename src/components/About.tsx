@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import { MdOutlinePlayArrow } from "react-icons/md";
 import Link from "next/link";
 import Canva from "./ThreeD";
@@ -52,8 +52,8 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 max-w-7xl w-full mx-auto p-4 rounded-md my-12 grid-flow-dense overflow-hidden">
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-3 row-span-2 order-2 md:order-1">
-            <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex items-center pb-16 md:pb-60 md:shadow-xl">
-              <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 font-semibold leading-none">
+            <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex  md:shadow-xl">
+              <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 pt-[4%] font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
               <Globe className="top-16" />
@@ -67,15 +67,18 @@ const About = () => {
             <Canva />
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 md:row-span-2 flex flex-col items-center justify-center order-4 md:order-3">
-            <span className="z-10 pointer-events-none whitespace-pre-wrap text-xl md:text-3xl font-semibold leading-none px-10 pt-8">
+            <span className="z-10 pointer-events-none whitespace-pre-wrap md:text-xs lg:text-base text-sm text-[#2E2F42] dark:text-[#C1C2D3] leading-none px-10 pt-6">
+              I constantly try to improve
+            </span>
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-xl md:text-3xl font-semibold leading-none px-10">
               My Skills
             </span>
             <div className="w-full">
               <IconCloud iconSlugs={slugs} />
             </div>
           </div>
-          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 flex items-center overflow-hidden order-3 md:order-4">
-            <span className="z-10 pointer-events-none whitespace-pre-wrap text-xl md:text-3xl font-semibold leading-none px-10 mb-5">
+          <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 flex overflow-hidden order-3 md:order-4">
+            <span className="z-10 pointer-events-none whitespace-pre-wrap text-xl md:text-3xl font-semibold leading-none px-10 pt-[10%]">
               Tech enthusiast with a passion for development.
             </span>
             <DotPattern
