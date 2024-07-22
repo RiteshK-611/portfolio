@@ -1,0 +1,19 @@
+self.onmessage = (e) => {
+  const theme = e.data.theme;
+  let svgPath;
+
+  if (theme === 'dark') {
+    svgPath = '/assets/svgs/bgd.svg';
+  } else {
+    svgPath = '/assets/svgs/bgl.svg';
+  }
+
+  fetch(svgPath)
+    .then((response) => response.text())
+    .then((data) => {
+      self.postMessage({ svg: data });
+    })
+    .catch((error) => {
+      self.postMessage({ error: error.message });
+    });
+};
