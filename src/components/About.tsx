@@ -39,8 +39,8 @@ const slugs = [
 ];
 
 const About = () => {
-  const { theme } = useTheme();
-  const currentTheme = theme === "dark" ? "dark" : "light";
+  const { theme, resolvedTheme } = useTheme();
+  const currentTheme = theme === "system" ? resolvedTheme : theme;
 
   return (
     <div id="about" className="w-full md:h-full p-2 py-16">
@@ -87,7 +87,7 @@ const About = () => {
               )}
             />
             <div className="absolute right-0 -bottom-5">
-              {theme === "dark" ? (
+              {currentTheme === "dark" ? (
                 <Image
                   src={"/assets/svgs/bgd.svg"}
                   width={200}
