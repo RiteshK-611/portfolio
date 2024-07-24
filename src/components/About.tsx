@@ -87,23 +87,13 @@ const About = () => {
               )}
             />
             <div className="absolute right-0 -bottom-5">
-              {currentTheme === "dark" ? (
-                <Image
-                  src={"/assets/svgs/bgd.svg"}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  alt="Dark theme background"
-                />
-              ) : (
-                <Image
-                  src={"/assets/svgs/bgl.svg"}
-                  width={200}
-                  height={200}
-                  priority={true}
-                  alt="Light theme background"
-                />
-              )}
+              <Image
+                src={"/assets/svgs/bg.svg"}
+                width={250}
+                height={250}
+                priority={true}
+                alt="background"
+              />
             </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-2 md:col-start-4 row-span-1 flex flex-col items-center justify-evenly order-5">
