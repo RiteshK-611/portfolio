@@ -2,14 +2,14 @@ import React from "react";
 import Link from "next/link";
 import { Spotlight } from "./ui/spotlight";
 
-const Main = () => {
+const Hero = () => {
   const socialBtn =
     "dark:shadow-lg dark:shadow-black dark:hover:shadow-none rounded-full shadow-xl text-[#5651e5] p-6 text-lg cursor-pointer hover:shadow-none ease-in duration-300";
 
   return (
     <main
       id="home"
-      className="w-full h-screen text-center flex min-h-screen items-center justify-between md:p-24 ">
+      className="w-full h-screen text-center flex min-h-screen items-center justify-between md:p-24">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" />
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
@@ -38,4 +38,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Hero;
