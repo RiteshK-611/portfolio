@@ -17,20 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          href="/assets/svgs/bgd.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-        <link
-          rel="preload"
-          href="/assets/svgs/bgl.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-      </head>
       <body className={inter.className}>
         <ThemeProvider enableSystem={true} attribute="class">
           {children}

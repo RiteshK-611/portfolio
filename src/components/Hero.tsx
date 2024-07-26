@@ -16,12 +16,12 @@ const Hero = () => {
           <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
             Let&apos;s Build Something Together
           </p>
-          <h1 className="py-4 text-gray-700 dark:text-gray-600">
+          <p className="py-4 text-4xl sm:text-5xl md:text-6xl font-mono text-gray-700 dark:text-gray-600">
             Hi, I&apos;m <span className="text-[#5651e5]">Ritesh.</span>
-          </h1>
-          <h1 className="py-2 text-gray-700 dark:text-gray-600">
+          </p>
+          <p className="py-2 text-4xl sm:text-5xl md:text-6xl font-mono text-gray-700 dark:text-gray-600">
             A Full-Stack Software Developer
-          </h1>
+          </p>
           <p className="py-4 text-gray-600 text dark:text-gray-400 max-w-[70%] m-auto">
             I&apos;m a Full-Stack Software Developer 🚀 having an experience of
             building Web and Mobile applications with Javascript / React / Node
