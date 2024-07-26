@@ -10,11 +10,12 @@ interface GlassCardProps {
 
 const GlassCard = ({ text, rotation, children }: GlassCardProps) => (
   <div
-    className="relative w-[180px] h-[200px] bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-[0_25px_25px_rgba(0,0,0,0.25)] flex justify-center items-center transition-all duration-500 rounded-[10px] -mx-[45px] backdrop-blur-[10px] group-hover:rotate-0 group-hover:mx-2.5"
+    className="relative w-[120px] sm:w-[150px] md:w-[180px] h-[140px] sm:h-[170px] md:h-[200px] bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-[0_25px_25px_rgba(0,0,0,0.25)] flex justify-center items-center transition-all duration-500 rounded-[10px] -mx-[20px] sm:-mx-[30px] md:-mx-[45px] backdrop-blur-[10px] group-hover:rotate-0 group-hover:mx-1 sm:group-hover:mx-2 md:group-hover:mx-2.5"
     style={{ transform: `rotate(${rotation}deg)` }}
-    data-text={text}>
+    data-text={text}
+  >
     {children}
-    <div className="absolute bottom-0 w-full h-[40px] bg-white/5 flex justify-center items-center text-white before:content-[attr(data-text)]">
+    <div className="absolute bottom-0 w-full h-[30px] sm:h-[35px] md:h-[40px] bg-white/5 flex justify-center items-center text-white text-xs sm:text-sm md:text-base before:content-[attr(data-text)]">
       {text}
     </div>
   </div>
@@ -22,7 +23,7 @@ const GlassCard = ({ text, rotation, children }: GlassCardProps) => (
 
 const GlassContainer = () => {
   return (
-    <div className="relative flex justify-center items-center group">
+    <div className="relative flex justify-center items-center group scale-75 sm:scale-90 md:scale-100">
       <GlassCard text="Github" rotation={-15}>
         <svg
           viewBox="0 0 496 512"
