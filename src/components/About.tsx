@@ -8,7 +8,7 @@ import Image from "next/image";
 import pic from "../../public/profile.png";
 import { motion } from "framer-motion";
 import IconCloud from "./ui/icon-cloud";
-import Globe from "./ui/globe";
+import { Globe } from "./ui/globe";
 import DotPattern from "./ui/dot-pattern";
 import { cn } from "@/lib/utils";
 import Ripple from "./ui/ripple";
@@ -52,12 +52,12 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-8 max-w-7xl w-full mx-auto p-4 rounded-md my-12 grid-flow-dense overflow-hidden">
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-3 row-span-2 order-2 md:order-1">
-            <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex  md:shadow-xl">
+            <div className="relative h-full w-full min-w-full overflow-hidden rounded-lg border bg-background flex justify-center md:shadow-xl">
               <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 pt-[4%] font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
-              <Globe className="top-16" />
-              <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+              <Globe className="absolute top-16" />
+              {/* <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" /> */}
             </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 md:row-span-2 p-5 order-1 md:order-2">
