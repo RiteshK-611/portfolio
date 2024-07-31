@@ -33,17 +33,16 @@ const About = () => {
               <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 pt-[4%] font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
-              <div className="absolute top-16">
-                <Globe className="" />
+              <div className="absolute top-16 px-3">
+                <Globe />
               </div>
-              {/* <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" /> */}
             </div>
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-[200px] md:min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 md:row-span-2 p-5 order-1 md:order-2">
-            <div className="w-full h-auto m-auto p-4 md:hidden hover:scale-95 ease-in duration-300">
-              <img src="/profile.png" alt="/" />
+            <div className="w-[70%] h-auto m-auto p-4 hover:scale-95 ease-in duration-300">
+              <img src="/profile.png" alt="riteshk" />
             </div>
-            <Canva />
+            {/* <Canva /> */}
           </div>
           <div className="rounded-xl ring-1 ring-inset ring-ring relative min-h-36 grid-flow-dense col-span-1 md:col-span-2 row-span-1 md:row-span-2 flex flex-col items-center justify-center order-4 md:order-3">
             <span className="z-10 pointer-events-none whitespace-pre-wrap md:text-xs lg:text-base text-sm text-[#2E2F42] dark:text-[#C1C2D3] leading-none px-10 pt-6">

@@ -102,6 +102,10 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  .span-tooltip {
+    position: relative;
+  }
+
   .span-tooltip > span {
     position: absolute;
     width: fit-content;
@@ -117,16 +121,15 @@
     transform: translateX(-0.3rem);
   }
 
-  .span-tooltip > span::before {
+  .span-tooltip > span::after {
     position: absolute;
     content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-    background-color: inherit;
-    transform: rotate(45deg);
-    top: calc(100% - 6px);
     left: 40%;
+    border-radius: 3px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(163, 163, 163, 0.4);
+    top: 100%;
   }
 
   .span-tooltip:hover > span {
@@ -134,6 +137,46 @@
     opacity: 1;
     bottom: calc(100% + 6px);
   }
+
+  /* .span-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .span-tooltip > span {
+    position: absolute;
+    width: max-content;
+    font-size: x-small;
+    font-weight: 600;
+    background-color: rgba(163, 163, 163, 0.4);
+    color: black;
+    padding: 3px 10px;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+    z-index: 20;
+  }
+  
+  .span-tooltip > span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(163, 163, 163, 0.4) transparent transparent transparent;
+  }
+  
+  .span-tooltip:hover > span {
+    visibility: visible;
+    opacity: 1;
+    bottom: calc(100% + 10px);
+  } */
 
   .shadow-neumorph {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05),
