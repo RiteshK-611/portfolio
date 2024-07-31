@@ -56,7 +56,9 @@ const About = () => {
               <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 pt-[4%] font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
-              <Globe className="absolute top-16" />
+              <div className="absolute top-16">
+                <Globe className="" />
+              </div>
               {/* <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" /> */}
             </div>
           </div>
