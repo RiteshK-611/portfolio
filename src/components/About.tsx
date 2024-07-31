@@ -13,30 +13,7 @@ import DotPattern from "./ui/dot-pattern";
 import { cn } from "@/lib/utils";
 import Ripple from "./ui/ripple";
 import { useTheme } from "next-themes";
-
-const slugs = [
-  "typescript",
-  "javascript",
-  "java",
-  "react",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "postgresql",
-  "firebase",
-  "vercel",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-];
+import { slugs } from "@/data";
 
 const About = () => {
   const { theme, resolvedTheme } = useTheme();
@@ -113,7 +90,7 @@ const About = () => {
         </div>
 
         <div
-          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%+10rem)]"
+          className="absolute hidden md:block inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%+10rem)]"
           aria-hidden="true">
           <motion.div
             initial={{
