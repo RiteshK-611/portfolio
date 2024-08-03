@@ -33,8 +33,8 @@ const About = () => {
               <span className="z-10 pointer-events-none whitespace-pre-wrap text-center text-xl md:text-3xl px-5 pt-[4%] font-semibold leading-none">
                 I&apos;m very flexible with timezone communications
               </span>
-              <div className="absolute top-16">
-                <Globe />
+              <div className="absolute top-8">
+                <Globe className="p-10"/>
               </div>
             </div>
           </div>
