@@ -11,8 +11,8 @@ export default function Home() {
     <>
       {/* <Navbar /> */}
       <Hero />
-      <About />
-      {/* <Skills /> */}
+      {/* <About /> */}
+      <Skills />
       <Project />
       <Footer />
       {/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
