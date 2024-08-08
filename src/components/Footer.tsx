@@ -14,7 +14,7 @@ const Footer = () => {
             & build something together!
           </span>
         </div>
-        <div className="mt-8 md:mt-0">
+        <div className="mt-8 md:mt-16 xl:mt-0">
           <GlassContainer />
         </div>
       </div>
