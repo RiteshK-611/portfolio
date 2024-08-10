@@ -9,8 +9,6 @@ import {
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { IconProps } from "@/lib/Icons";
-import { CodeIcon, HomeIcon, Pencil1Icon, PersonIcon } from "@radix-ui/react-icons";
 import { navbar } from "@/data";
 
 export default function Navbar() {
