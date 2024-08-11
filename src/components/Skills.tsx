@@ -59,22 +59,22 @@ const Skills = () => {
         <h2 className="py-4">What I can do</h2>
         {/* <div className="grid grid-cols-3 sm:grid-cols-4 gap-8 place-items-center">
           {skills.map((skill, index) => (
+            ))}
+            </div> */}
             <div className="relative w-24 h-24 group">
               <div className="absolute inset-0 flex justify-center items-center">
-                <div className="absolute w-4/5 h-4/5 filter blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover">
+                <div className="absolute w-4/5 h-4/5 blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover">
                   {svgContent}
                 </div>
-                <div className="absolute w-4/5 h-4/5 filter blur-sm opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover">
+                <div className="absolute w-4/5 h-4/5 blur-[2px] opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover">
                   {svgContent}
                 </div>
                 <div className="relative w-4/5 h-4/5 transition-transform ease-in-out duration-300 group-hover:scale-105">
                   {svgContent}
                 </div>
               </div>
-              <h6 className={name}>{skill.name}</h6>
+              {/* <h6 className={name}>{skill.name}</h6> */}
             </div>            
-          ))}
-        </div> */}
       </div>
     </div>
   );

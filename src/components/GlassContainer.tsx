@@ -10,12 +10,22 @@ interface GlassCardProps {
 
 const GlassCard = ({ text, rotation, children }: GlassCardProps) => (
   <div
-    className="relative w-[120px] sm:w-[150px] md:w-[180px] h-[140px] sm:h-[170px] md:h-[200px] bg-gradient-to-b from-white/10 to-transparent border border-white/10 shadow-[0_25px_25px_rgba(0,0,0,0.25)] flex justify-center items-center transition-all duration-500 rounded-[10px] -mx-[20px] sm:-mx-[30px] md:-mx-[45px] backdrop-blur-[10px] group-hover:rotate-0 group-hover:mx-1 sm:group-hover:mx-2 md:group-hover:mx-2.5"
+    className="relative w-[120px] sm:w-[150px] md:w-[150px] h-[140px] sm:h-[170px] md:h-[170px] ring-1 ring-ring bg-gradient-to-b from-white/10 to-transparent border border-foreground/10 shadow-[0_25px_25px_rgba(0,0,0,0.25)] flex justify-center items-center transition-all duration-500 rounded-[10px] -mx-[20px] sm:-mx-[30px] md:-mx-[45px] backdrop-blur-[10px] group-hover:rotate-0 group-hover:mx-1 sm:group-hover:mx-2 md:group-hover:mx-2.5"
     style={{ transform: `rotate(${rotation}deg)` }}
     data-text={text}>
-    {children}
-    <div className="absolute bottom-0 w-full h-[30px] sm:h-[35px] md:h-[40px] bg-white/5 flex justify-center items-center text-xs sm:text-sm md:text-base before:content-[attr(data-text)]">
-      {text}
+    <div className="relative w-24 h-24 group">
+      <div className="absolute inset-0 flex justify-center items-center">
+        <div className="absolute flex justify-center items-center blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover">
+          {children}
+        </div>
+        <div className="absolute flex justify-center items-center blur-[2px] opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover">
+          {children}
+        </div>
+        <div className="relative flex justify-center items-center transition-transform ease-in-out duration-300 group-hover:scale-105">
+          {children}
+        </div>
+      </div>
+      {/* <h6 className={name}>{skill.name}</h6> */}
     </div>
   </div>
 );

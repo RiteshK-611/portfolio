@@ -343,15 +343,16 @@
   }
 
   .custom-transform-backdrop-1 {
-    transform: translate(-15%, 5%) scale(1);
+    transform: translate(-15%, 8%) scale(1);
   }
 
   .custom-transform-backdrop-2 {
-    transform: translate(-30%, 10%) scale(1);
+    transform: translate(-30%, 18%) scale(1);
   }
 
   .custom-transform-hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    filter: blur(1px);
   }
 }
