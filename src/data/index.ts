@@ -105,7 +105,7 @@ export const navbar = {
   },
   Blog: {
     name: "Blog",
-    url: "https://riteshkokam.hashnode.com",
+    url: "https://riteshkokam.hashnode.dev",
     icon: Pencil1Icon,
   },
 };
