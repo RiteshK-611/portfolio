@@ -95,17 +95,17 @@ export const navbar = {
   },
   About: {
     name: "About",
-    url: "#",
+    url: "#about",
     icon: PersonIcon,
   },
   Projects: {
     name: "Projects",
-    url: "#",
+    url: "#projects",
     icon: CodeIcon,
   },
   Blog: {
     name: "Blog",
-    url: "#",
+    url: "https://riteshkokam.hashnode.com",
     icon: Pencil1Icon,
   },
 };
