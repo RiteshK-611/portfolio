@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { iconList } from "@/data";
 
 const RotatingCircle = () => {
   const [isInView, setIsInView] = useState(false);
@@ -32,21 +34,50 @@ const RotatingCircle = () => {
   return (
     <div
       ref={circleRef}
-      className="absolute inset-0 w-full h-full flex justify-center items-center -z-10"
-    >
+      className="absolute inset-0 w-full h-full flex justify-center items-center -z-10"      >
       <div className="absolute w-full h-full flex justify-center items-center bottom-[25%]">
-        {boxes.map((index) => (
+        {iconList.map((url, index) => (
           <div
             key={index}
-            className="absolute w-[110px] h-[110px] bg-white/10 rounded-[15px] backdrop-blur-[10px] border border-white/20"
+            className="absolute w-[110px] h-[110px] bg-black/10 dark:bg-white/10 rounded-[15px] backdrop-blur-[10px] border border-white/20 flex items-center justify-center group"
             style={{
               transformOrigin: "center 650px",
-              transform: `rotate(calc(360deg / 24 * ${index}))`,
+              transform: `rotate(calc(360deg / ${iconList.length} * ${index}))`,
               opacity: isInView ? 1 : 0,
-              transition: `opacity 0.5s ease ${index * 0.1}s, transform 1s ease ${index * 0.1}s`,
-              animation: isInView ? `rotate 30s linear infinite ${index * -1.25}s` : 'none',
-            }}
-          />
+              transition: `opacity 0.5s ease ${
+                index * 0.1
+              }s, transform 1s ease ${index * 0.1}s`,
+              animation: isInView
+                ? `rotate 30s linear infinite ${index * -1.25}s`
+                : "none",
+            }}>
+            <div className="absolute flex items-center justify-center">
+              <Image
+                className="absolute blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover"
+                src={`/assets/svgs${url[0]}`}
+                width={50}
+                height={50}
+                alt={url[1]}
+                loading="lazy"
+              />
+              {/* <Image
+                className="absolute blur-[2px] opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover"
+                src={`/assets/svgs${url[0]}`}
+                width={50}
+                height={50}
+                alt={url[1]}
+                loading="lazy"
+              /> */}
+              <Image
+                className="relative transition-transform ease-in-out duration-300 group-hover:scale-105"
+                src={`/assets/svgs${url[0]}`}
+                width={50}
+                height={50}
+                alt={url[1]}
+                loading="lazy"
+              />
+            </div>
+          </div>
         ))}
       </div>
     </div>
@@ -55,7 +86,8 @@ const RotatingCircle = () => {
 
 export default RotatingCircle;
 
-{/*
+{
+  /*
 
   "use client";
 
@@ -115,4 +147,5 @@ const RotatingCircle = () => {
 
 export default RotatingCircle;
 
-*/}
+*/
+}
