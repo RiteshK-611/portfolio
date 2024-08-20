@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   SiMongodb,
   SiFirebase,
@@ -17,7 +18,7 @@ import {
   SiNpm,
 } from "react-icons/si";
 
-import * as icons from 'simple-icons';
+import * as icons from "simple-icons";
 
 const Skills = () => {
   const grp = `group neumorphism-glass`;
@@ -61,20 +62,31 @@ const Skills = () => {
           {skills.map((skill, index) => (
             ))}
             </div> */}
-            <div className="relative w-24 h-24 group">
-              <div className="absolute inset-0 flex justify-center items-center">
-                <div className="absolute w-4/5 h-4/5 blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover">
-                  {svgContent}
-                </div>
-                <div className="absolute w-4/5 h-4/5 blur-[2px] opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover">
-                  {svgContent}
-                </div>
-                <div className="relative w-4/5 h-4/5 transition-transform ease-in-out duration-300 group-hover:scale-105">
-                  {svgContent}
-                </div>
-              </div>
-              {/* <h6 className={name}>{skill.name}</h6> */}
-            </div>            
+        <div className="relative group">
+          <div className="relative flex justify-center items-center">
+            <Image
+              className="absolute blur-sm opacity-30 custom-transform-backdrop-2 group-hover:custom-transform-hover"
+              src={`/assets/svgs/firebase.svg`}
+              width={70}
+              height={70}
+              alt=""
+            />
+            <Image
+              className="absolute blur-[2px] opacity-70 custom-transform-backdrop-1 group-hover:custom-transform-hover"
+              src={`/assets/svgs/firebase.svg`}
+              width={70}
+              height={70}
+              alt=""
+            />
+            <Image
+              className="relative transition-transform ease-in-out duration-300 group-hover:scale-105"
+              src={`/assets/svgs/firebase.svg`}
+              width={70}
+              height={70}
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
