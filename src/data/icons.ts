@@ -1,0 +1,20 @@
+// assets/svgs/index.ts
+export { default as ar } from "/assets/ar.svg";
+export { default as bg } from "./bg.svg";
+export { default as clerk } from "./clerk.svg";
+export { default as drizzle } from "./drizzle.svg";
+export { default as figma } from "./figma.svg";
+export { default as firebase } from "./firebase.svg";
+export { default as googleGemini } from "./googleGemini.svg";
+export { default as javascript } from "./javascript.svg";
+export { default as mongodb } from "./mongodb.svg";
+export { default as mui } from "./mui.svg";
+export { default as next } from "./next.svg";
+export { default as nodejs } from "./nodejs.svg";
+export { default as postgresql } from "./postgresql.svg";
+export { default as pwa } from "./pwa.svg";
+export { default as react } from "./react.svg";
+export { default as shadcnui } from "./shadcnui.svg";
+export { default as stripe } from "./stripe.svg";
+export { default as tail } from "./tail.svg";
+export { default as typescript } from "./typescript.svg";
