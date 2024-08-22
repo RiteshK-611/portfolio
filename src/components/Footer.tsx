@@ -21,7 +21,7 @@ const Footer = () => {
           <GlassContainer />
         </div> */}
         </div>
-      <div className="absolute bg-gradient-to-b from-transparent to-background w-full h-40 inset-x-0 bottom-0"/>
+      <div className="absolute bg-gradient-to-b from-transparent to-background w-full h-80 inset-x-0 bottom-0"/>
       </footer>
     </>
   );
