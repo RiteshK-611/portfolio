@@ -20,7 +20,7 @@ const About = () => {
   const currentTheme = theme === "system" ? resolvedTheme : theme;
 
   return (
-    <div id="about" className="w-full md:h-full p-2 py-16">
+    <section id="about" className="w-full md:h-full p-2 py-16">
       <div className="max-w-[1240px] m-auto py-16">
         {/* <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           About
@@ -109,7 +109,7 @@ const About = () => {
             }}></motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
