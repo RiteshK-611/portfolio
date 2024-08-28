@@ -7,7 +7,7 @@ const Hero = () => {
     "dark:shadow-lg dark:shadow-black dark:hover:shadow-none rounded-full shadow-xl text-[#5651e5] p-6 text-lg cursor-pointer hover:shadow-none ease-in duration-300";
 
   return (
-    <main
+    <section
       id="home"
       className="w-full h-screen text-center flex min-h-screen items-center justify-between md:p-24">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" />
@@ -34,7 +34,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 };
 
