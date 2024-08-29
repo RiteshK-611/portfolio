@@ -42,7 +42,7 @@ const Skills = () => {
   ];
 
   return (
-    <div id="skills" className="w-full md:h-screen p-2 py-16">
+    <section id="skills" className="w-full md:h-screen p-2 py-16">
       <div className="max-w-[1240px] m-auto flex flex-col justify-center h-full">
         <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           Skills
