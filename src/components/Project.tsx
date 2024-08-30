@@ -10,7 +10,7 @@ import { projects } from "@/data";
 
 const Project = () => {
   return (
-    <div id="projects" className="w-full md:h-full p-2 py-16">
+    <section id="projects" className="w-full md:h-full p-2 py-16">
       <div className="max-w-[1240px] m-auto py-16">
         <p className="uppercase text-xl tracking-widest text-[#5651e5]">
           Projects
@@ -65,7 +65,7 @@ const Project = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
