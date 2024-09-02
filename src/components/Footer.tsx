@@ -3,7 +3,7 @@ import GlassContainer from "./GlassContainer";
 
 const Footer = () => {
   return (
-    <section className="w-full min-h-screen text-center flex items-center justify-between p-4 sm:p-8 md:p-16 lg:p-24">
+    <footer className="w-full min-h-screen text-center flex items-center justify-between p-4 sm:p-8 md:p-16 lg:p-24">
       <div className="max-w-[1240px] w-full mx-auto flex flex-col xl:flex-row justify-around items-center gap-8 md:gap-4">
         <div className="text-left font-mono">
           <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
@@ -18,7 +18,7 @@ const Footer = () => {
           <GlassContainer />
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
