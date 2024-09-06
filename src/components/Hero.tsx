@@ -10,7 +10,7 @@ const Hero = () => {
     <section
       id="home"
       className="w-full h-screen text-center flex min-h-screen items-center justify-between md:p-24">
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" />
+      {/* <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#5651e5" /> */}
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-600 dark:text-gray-400">
