@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Canva from "./ThreeD";
 import Image from "next/image";
-import pic from "../../public/profile.png";
 import { motion } from "framer-motion";
 import IconCloud from "./ui/icon-cloud";
 import { Globe } from "./ui/globe";
