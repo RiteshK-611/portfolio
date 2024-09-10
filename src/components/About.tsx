@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-// import { MdOutlinePlayArrow } from "react-icons/md";
 import Link from "next/link";
 import Canva from "./ThreeD";
 import Image from "next/image";
